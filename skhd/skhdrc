@@ -1,0 +1,94 @@
+# -----
+# Change focus
+# -----
+
+## Change focus to window
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+## Change focus to monitor/display
+cmd + shift - h : yabai -m display --focus west
+cmd + shift - j : yabai -m display --focus south
+cmd + shift - k : yabai -m display --focus north
+cmd + shift - l : yabai -m display --focus east
+cmd + shift - c : yabai -m display --focus recent
+
+
+## Change focus to space
+# We use System's shortcute for this
+# using cmd + shift something
+# cmd + shift - ; : yabai -m space --focus recent
+
+# -----
+# Internal space operations
+# -----
+
+## Move window
+alt + ctrl - r : yabai -m space --rotate 270
+alt + ctrl - y : yabai -m space --mirror y-axis
+alt + ctrl - x : yabai -m space --mirror x-axis
+alt + ctrl - t : yabai -m window --toggle float --grid 5:5:1:1:3:3
+
+## Maximize window toggle
+alt + ctrl - m : yabai -m window --toggle zoom-fullscreen
+
+## Move window without splitting
+alt + ctrl - h : yabai -m window --swap west
+alt + ctrl - j : yabai -m window --swap south
+alt + ctrl - k : yabai -m window --swap north
+alt + ctrl - l : yabai -m window --swap east
+
+## Move window and split
+alt + ctrl - up : yabai -m window --warp south
+alt + ctrl - down : yabai -m window --warp north
+alt + ctrl - left : yabai -m window --warp west
+alt + ctrl - right : yabai -m window --warp east
+
+# -----
+# Resizing Operations
+# -----
+
+## Resize window
+alt + shift - l : yabai -m window --resize right:10:10
+alt + shift - h : yabai -m window --resize right:-10:-10
+alt + shift - j : yabai -m window --resize bottom:10:10
+alt + shift - k : yabai -m window --resize bottom:-10:-10
+
+## Balance out tree of windows (resize to occupy same area)
+alt + shift - e : yabai -m space --balance
+
+
+# -----
+# Displays operations
+# -----
+
+## Move window to other space
+alt + cmd - 1 : yabai -m window --space 1;
+alt + cmd - 2 : yabai -m window --space 2;
+alt + cmd - 3 : yabai -m window --space 3;
+alt + cmd - 4 : yabai -m window --space 4;
+alt + cmd - 5 : yabai -m window --space 5;
+alt + cmd - 6 : yabai -m window --space 6;
+alt + cmd - 7 : yabai -m window --space 7;
+alt + cmd - 8 : yabai -m window --space 8;
+alt + cmd - 9 : yabai -m window --space 9;
+alt + cmd - p : yabai -m window --space prev;
+alt + cmd - n : yabai -m window --space next;
+
+## Move window to other monitor/display
+alt + cmd - h : yabai -m window --display west; yabai -m display --focus west;
+alt + cmd - j : yabai -m window --display south; yabai -m display --focus south;
+alt + cmd - k : yabai -m window --display north; yabai -m display--focus north;
+alt + cmd - l : yabai -m window --display east; yabai -m display --focus east;
+
+# -----
+# Other Operations
+# -----
+
+## Restart
+# cmd + shift - y : yabai --restart-service
+# cmd + shift - d : skhd --restart-service
+
+cmd - h : ""
